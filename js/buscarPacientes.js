@@ -6,7 +6,7 @@ botaoBuscar.addEventListener('click', function(event) {
     var xhr = new XMLHttpRequest();
     xhr.open("get", 'https://api-pacientes.herokuapp.com/pacientes');
     xhr.addEventListener("load", function() {
-        var erroAjax = document.querySelector('.erro-ajax')
+        var erroAjax = document.querySelector('#erro-ajax')
         if (xhr.status == 200) {
             erroAjax.classList.add('invisivel');
             var resposta = xhr.responseText;
